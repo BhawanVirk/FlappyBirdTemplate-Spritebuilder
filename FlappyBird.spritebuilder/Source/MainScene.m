@@ -34,7 +34,7 @@
     _grounds = @[_ground1, _ground2];
     
     for (CCNode *ground in _grounds) {
-        // set collision txpe
+        // set collision type
         ground.physicsBody.collisionType = @"level";
         ground.zOrder = DrawingOrderGround;
     }
@@ -79,7 +79,7 @@
         character.physicsBody.allowsRotation = FALSE;
         [character stopAllActions];
         
-        CCActionMoveBy *moveBy = [CCActionMoveBy actionWithDuration:0.2f position:ccp(-2, 2)];
+        CCActionMoveBy *moveBy = [CCActionMoveBy actionWithDuration:0.2f position:ccp(-2, 20)];
         CCActionInterval *reverseMovement = [moveBy reverse];
         CCActionSequence *shakeSequence = [CCActionSequence actionWithArray:@[moveBy, reverseMovement]];
         CCActionEaseBounce *bounce = [CCActionEaseBounce actionWithAction:shakeSequence];
