@@ -205,14 +205,14 @@
 				</array>
 				<array>
 					<real>0.0</real>
-					<real>23</real>
+					<real>24</real>
 				</array>
 				<array>
-					<real>33</real>
-					<real>23</real>
+					<real>34</real>
+					<real>24</real>
 				</array>
 				<array>
-					<real>33</real>
+					<real>34</real>
 					<real>0.0</real>
 				</array>
 			</array>
@@ -220,16 +220,16 @@
 			<array>
 				<array>
 					<array>
-						<real>33</real>
+						<real>34</real>
 						<real>0.0</real>
 					</array>
 					<array>
-						<real>33</real>
-						<real>23</real>
+						<real>34</real>
+						<real>24</real>
 					</array>
 					<array>
 						<real>0.0</real>
-						<real>23</real>
+						<real>24</real>
 					</array>
 					<array>
 						<real>0.0</real>
@@ -335,6 +335,8 @@
 				<array/>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 		<key>seqExpanded</key>
 		<true/>
 	</dict>
