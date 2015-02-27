@@ -99,7 +99,6 @@
     Obstacle *obstacle = (Obstacle *)[CCBReader load:@"Obstacle"];
     CGPoint screenPosition = [self convertToWorldSpace:ccp(380, 0)];
     CGPoint worldPosition = [physicsNode convertToNodeSpace:screenPosition];
-    NSLog(@"worldPosition: x=%f, y=%f", worldPosition.x, worldPosition.y);
     obstacle.position = worldPosition;
     [obstacle setupRandomPosition];
     obstacle.zOrder = DrawingOrderPipes;
@@ -119,7 +118,7 @@
 {
     _sinceTouch += delta;
     
-    character.rotation = clampf(character.rotation, -30.f, 90.f);
+    //character.rotation = clampf(character.rotation, -30.f, 90.f);
     
     if (character.physicsBody.allowsRotation) {
         float angularVelocity = clampf(character.physicsBody.angularVelocity, -2.f, 1.f);
