@@ -131,8 +131,6 @@
     
     physicsNode.position = ccp(physicsNode.position.x - (character.physicsBody.velocity.x * delta), physicsNode.position.y);
     
-    NSLog(@"x = %f", character.physicsBody.velocity.x);
-    
     // loop the ground
     for (CCNode *ground in _grounds) {
         // get the world position of the ground
