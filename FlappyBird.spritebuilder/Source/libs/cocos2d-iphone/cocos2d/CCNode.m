@@ -1524,6 +1524,8 @@ CGAffineTransformMakeRigid(CGPoint translate, CGFloat radians)
 		_isTransformDirty = NO;
 	}
 
+    NSLog(@"INSIDE COCOS: a=%f, b=%f, c=%f, d=%f, tx=%f, ty=%f", _transform.a, _transform.b, _transform.c, _transform.d, _transform.tx, _transform.ty);
+    
 	return _transform;
 }
 
