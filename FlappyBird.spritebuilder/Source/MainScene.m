@@ -138,11 +138,11 @@
         // get the world position of the ground
         CGPoint groundWorldPosition = [physicsNode convertToWorldSpace:ground.position];
         
-        NSLog(@"Ground%i: x=%f, y=%f", groundNum, groundWorldPosition.x, groundWorldPosition.y);
-        groundNum++;
-        
         // get the screen position of the ground
         CGPoint groundScreenPosition = [self convertToNodeSpace:groundWorldPosition];
+        
+        NSLog(@"Ground%i: x=%f, y=%f", groundNum, groundScreenPosition.x, groundScreenPosition.y);
+        groundNum++;
         
         // if the left corner is one complete width off the screen, move it to the right
         if (groundScreenPosition.x <= (-1 * ground.contentSize.width)) {
