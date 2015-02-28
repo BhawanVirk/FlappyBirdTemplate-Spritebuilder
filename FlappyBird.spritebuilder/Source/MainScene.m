@@ -131,10 +131,14 @@
     
     physicsNode.position = ccp(physicsNode.position.x - (character.physicsBody.velocity.x * delta), physicsNode.position.y);
     
+    int groundNum = 1;
+    
     // loop the ground
     for (CCNode *ground in _grounds) {
         // get the world position of the ground
         CGPoint groundWorldPosition = [physicsNode convertToWorldSpace:ground.position];
+        NSLog(@"Ground%i: x=%f, y=%f", groundNum, groundWorldPosition.x, groundWorldPosition.y);
+        groundNum++;
         // get the screen position of the ground
         CGPoint groundScreenPosition = [self convertToNodeSpace:groundWorldPosition];
         
