@@ -140,9 +140,7 @@
     }
     
     physicsNode.position = ccp(physicsNode.position.x - (character.physicsBody.velocity.x * delta), physicsNode.position.y);
-    
-    int groundNum = 1;
-    
+
     // loop the ground
     for (CCNode *ground in _grounds) {
         // get the world position of the ground
@@ -150,9 +148,6 @@
         
         // get the screen position of the ground
         CGPoint groundScreenPosition = [self convertToNodeSpace:groundWorldPosition];
-        
-        NSLog(@"Ground%i: x=%f, y=%f", groundNum, groundScreenPosition.x, groundScreenPosition.y);
-        groundNum++;
         
         // if the left corner is one complete width off the screen, move it to the right
         if (groundScreenPosition.x <= (-1 * ground.contentSize.width)) {
@@ -169,6 +164,18 @@
         // move it to the right
         if (bush.position.x <= (-1 * bush.contentSize.width)) {
             bush.position = ccp(bush.position.x + 2 * bush.contentSize.width, bush.position.y);
+        }
+    }
+    
+    // move and loop the clouds
+    for (CCNode *cloud in _clouds) {
+        // move the cloud
+        cloud.position = ccp(cloud.position.x - (character.physicsBody.velocity.x * delta), cloud.position.y);
+        
+        // if the left corner is one complete width off the screen,
+        // move it to the right
+        if (cloud.position.x <= (-1 * cloud.contentSize.width)) {
+            cloud.position = ccp(cloud.position.x + 2 * cloud.contentSize.width, cloud.position.y);
         }
     }
     
