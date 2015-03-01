@@ -49,7 +49,6 @@
     // Configure CCFileUtils to work with SpriteBuilder
     [CCBReader configureCCFileUtils];
     
-    [[CCDirector sharedDirector] displayStats];
     // Do any extra configuration of Cocos2d here (the example line changes the pixel format for faster rendering, but with less colors)
     //[cocos2dSetup setObject:kEAGLColorFormatRGB565 forKey:CCConfigPixelFormat];
     

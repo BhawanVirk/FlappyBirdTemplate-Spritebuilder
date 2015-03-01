@@ -59,6 +59,8 @@
 
 
 - (void)didLoadFromCCB {
+    [[CCDirector sharedDirector] displayStats];
+    
     self.userInteractionEnabled = TRUE;
     
     _grounds = @[_ground1, _ground2];
