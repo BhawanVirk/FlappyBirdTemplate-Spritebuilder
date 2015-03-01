@@ -16,6 +16,7 @@
     self.position = ccp(115, 250);
     self.zOrder = DrawingOrderHero;
     self.physicsBody.collisionType = @"character";
+    self.animationManager.playbackSpeed = 10.f;
 }
 
 - (void)flap
