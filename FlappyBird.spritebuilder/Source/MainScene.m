@@ -254,7 +254,8 @@
     {
         @try
         {
-            character.physicsBody.velocity = ccp(80.f + (points * 15), clampf(character.physicsBody.velocity.y, -MAXFLOAT, 200.f));
+            float velocityX = ((float)points * 15.f) + 80.f;
+            character.physicsBody.velocity = ccp(velocityX, clampf(character.physicsBody.velocity.y, -MAXFLOAT, 200.f));
             
             [super update:delta];
         }
