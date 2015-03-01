@@ -71,7 +71,7 @@
     [_parallaxContainer addChild:_parallaxBackground];
     
     // Note that the bush ratio is larger than the cloud
-    _bushParallaxRatio = ccp(0.9, 1);
+    _bushParallaxRatio = ccp(100.9, 1);
     _cloudParallaxRatio = ccp(2.5, 1);
     
     for (CCNode *bush in _bushes) {
