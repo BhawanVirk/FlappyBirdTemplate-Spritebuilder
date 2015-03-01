@@ -22,7 +22,7 @@
 - (void)flap
 {
     [self.physicsBody applyImpulse:ccp(0, 400.f)];
-    
+    self.rotation = 0.f;
 }
 
 @end

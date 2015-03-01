@@ -224,7 +224,7 @@
         @try
         {
             
-            _parallaxBackground.position = ccp(_parallaxBackground.position.x - (2000.f * delta), _parallaxBackground.position.y);
+            _parallaxBackground.position = ccp(_parallaxBackground.position.x - (20000.f * delta), _parallaxBackground.position.y);
             
             // loop the bushes
             for (CCNode *bush in _bushes) {
