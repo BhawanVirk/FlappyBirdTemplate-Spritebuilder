@@ -195,8 +195,6 @@
             ground.position = ccp(ground.position.x + 2 * ground.contentSize.width, ground.position.y);
         }
     }
-
-    NSLog(@"%f", delta);
     
     _parallaxBackground.position = ccp(_parallaxBackground.position.x - (character.physicsBody.velocity.x * delta), _parallaxBackground.position.y);
     
@@ -256,7 +254,7 @@
     {
         @try
         {
-            character.physicsBody.velocity = ccp(80.f, clampf(character.physicsBody.velocity.y, -MAXFLOAT, 200.f));
+            character.physicsBody.velocity = ccp(80.f + (points * 2), clampf(character.physicsBody.velocity.y, -MAXFLOAT, 200.f));
             
             [super update:delta];
         }
