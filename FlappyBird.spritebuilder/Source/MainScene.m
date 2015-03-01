@@ -133,7 +133,7 @@
         [character stopAllActions];
         
         // stop the parallax effect
-        _parallaxBackground.position = ccp(0.f, _parallaxBackground.position.y);
+        _parallaxBackground.position = ccp(_parallaxBackground.position.x, _parallaxBackground.position.y);
         
         CCActionMoveBy *moveBy = [CCActionMoveBy actionWithDuration:0.2f position:ccp(-2, 2)];
         CCActionInterval *reverseMovement = [moveBy reverse];
