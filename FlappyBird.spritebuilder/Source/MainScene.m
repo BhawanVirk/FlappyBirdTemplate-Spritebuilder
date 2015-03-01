@@ -59,7 +59,7 @@
 
 
 - (void)didLoadFromCCB {
-    [[CCDirector sharedDirector] displayStats];
+    [[CCDirector sharedDirector] setDisplayStats:YES];
     
     self.userInteractionEnabled = TRUE;
     
