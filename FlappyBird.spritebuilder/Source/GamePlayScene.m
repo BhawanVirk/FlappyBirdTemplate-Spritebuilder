@@ -21,7 +21,7 @@
     // Check to see if two seconds have passed
     if (timeSinceObstacle > 2.0f) {
         // Add a new obstacle
-        //[self addObstacle];
+        [self addObstacle];
         
         // Then reset the timer
         timeSinceObstacle = 0.0f;
