@@ -196,6 +196,8 @@
         }
     }
 
+    NSLog(@"%f", delta);
+    
     _parallaxBackground.position = ccp(_parallaxBackground.position.x - (character.physicsBody.velocity.x * delta), _parallaxBackground.position.y);
     
     // loop the bushes
